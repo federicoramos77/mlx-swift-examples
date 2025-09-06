@@ -327,7 +327,7 @@ public class NomicBertModel: Module, EmbeddingModel {
     public var vocabularySize: Int
 
     public init(
-        _ config: NomicBertConfiguration, pooler: Bool = true,
+        _ config: NomicBertConfiguration, pooler: Bool = false,
         lmHead: Bool = false
     ) {
         precondition(config.vocabularySize > 0)
