@@ -41,6 +41,13 @@ private class ModelTypeRegistry: @unchecked Sendable {
             let model = BertModel(configuration)
             return model
         },
+        "mobilebert": {
+            url in
+            let configuration = try JSONDecoder().decode(
+                BertConfiguration.self, from: Data(contentsOf: url))
+            let model = BertModel(configuration)
+            return model
+        },
         "roberta": {
             url in
             let configuration = try JSONDecoder().decode(
